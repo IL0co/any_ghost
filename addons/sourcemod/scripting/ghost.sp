@@ -238,7 +238,7 @@ public void SpawnGhost(float pos[3], int client)
 
 			loop = false;
 
-			if(gDebug)
+			if(gDebug) 
 			{
 				DataPack data = new DataPack();
 				data.WriteCell(EntIndexToEntRef(zone));
