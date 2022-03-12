@@ -1,0 +1,8 @@
+materials/particle/ghost/animated_eyes.vmt
+materials/particle/ghost/animated_eyes.vtf
+materials/particle/ghost/largesmoke.vmt
+materials/particle/ghost/largesmoke.vtf
+materials/particle/ghost/softglow_translucent_fog.vmt
+materials/particle/ghost/outline_translucent.vtf
+particles/ghost2.pcf
+sound/ghost_eating.wav

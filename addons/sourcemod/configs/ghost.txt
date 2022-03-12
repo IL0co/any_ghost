@@ -1,0 +1,100 @@
+"Config"
+{
+    "delete on spawn"   "0"     // Bool; def 0; Удалять ли призраков игрока при его спавне?
+    "spawn on warmup"   "0"     // Bool; def 0; Будут ли появляться во время разминки?
+    "max spawn chance"   "50"   // Int; def 50; Максимальное количество попыток заспавнить какой-то из призраков
+
+    "Ghost_Cyan"     // Идентификатор
+    {
+        "spawn chance"  "50.0"      // Float; Шанс спавна, нужен если будет много призраков в этом файле, если будет только один призрак, то поставьте "max spawn chance" на 1
+        "team spawn"    "3"         // Int; def 0; За какую команду будет спавнится, 0 - любая, 2 - Т, 3 - КТ
+
+        "particle name" "Ghost_Cyan"    // Имя партикла
+
+        "mins"  "-16 0 -16"     // Vector; def -16 0 -16; Первая точка триггер зоны. Зону видно при включенном дебаге! sm_ghost_debug
+        "maxs"  "16 32 16"      // Vector; def 16 32 16; Вторая точка триггер зоны. XYZ
+        
+        "uplift" "30.0"         // Float; def 0.0; На сколько поднять его от земли
+
+        "lifetime"  "-1.0"      // Float; def -1.0; Время жизни, -1 - до след конца раунда
+
+        "sound enable"  "1"     // Bool; def 1; Включены ли звуки?
+        "sound file"    "ghost_eating.wav"  // Путь к звуку относительно папки "sound/"   (То-есть её указывать не нужно)
+        "sound volume"  "1.0"   // Float; def 1.0; 0.0-1.0; Громкость звука
+        "sound pitch"   "100"   // Int; def 100; Высота тона звука
+
+        "command on take"   "sm_givecredits {client} 20"    // Команда, которая выполнится после поднятия призрака. {client} - заменяется на индекс игрока
+
+        "visions bits"  "0"     // Int; def 0; Сумма чисел определяющее поведения отображения и подбора призрака.
+                                //             0 - нету фильтров
+                                //             1 - не видно свой призрак (что выпал с тебя после твоей смерти), так-же он не будет виден тебе
+                                //             2 - не видно если владелец из вражеской команды
+                                //             4 - не виден если владелец из твоей команды
+                                //             8 - не виден наблюдателям
+
+        "message to all"    ""  // String; def null; Сообщение всем в чате, когда игрок подобрал. Есть поддержка цветов! {name} - заменяется на ник игрока
+        "message to taker"  ""  // String; def null; Сообщение взявшему игроку в чате, когда он подобрал. Есть поддержка цветов!
+    //  Цвета для чата: {DEFAULT} {RED} {LIGHTPURPLE} {GREEN} {LIME} {LIGHTGREEN} {LIGHTRED} {GRAY} {LIGHTOLIVE} {OLIVE} {LIGHTBLUE} {BLUE} {PURPLE} {GRAYBLUE}
+    }
+
+    "Ghost_Green"    
+    {
+        "spawn chance"  "50.0"       
+
+        "particle name" "Ghost_Green"    
+
+        "mins"  "-16 0 -16"    
+        "maxs"  "16 32 16"     
+        "uplift" "30.0"
+
+        "lifetime"  "-1.0"     
+
+        "sound enable"  "1"
+        "sound file"    "ghost_eating.wav"  
+        "sound volume"  "1.0"   
+        "sound pitch"   "100"   
+
+        "command on take"   "sm_givecredits {client} 20"
+    }
+
+    "Ghost_Red"    
+    {
+        "spawn chance"  "50.0"       
+        "team spawn"    "2"
+
+        "particle name" "Ghost_Red"    
+
+        "mins"  "-16 0 -16"    
+        "maxs"  "16 32 16"     
+        "uplift" "30.0"
+
+        "lifetime"  "-1.0"     
+
+        "sound enable"  "1"
+        "sound file"    "ghost_eating.wav"  
+        "sound volume"  "1.0"   
+        "sound pitch"   "100"   
+
+        "command on take"   "sm_givecredits {client} 20"
+    }
+
+    "Ghost_Orange"    
+    {
+        "spawn chance"  "50.0"   
+
+        "particle name" "Ghost_Orange"    
+
+        "mins"  "-16 0 -16"    
+        "maxs"  "16 32 16"     
+        "uplift" "30.0"
+
+        "lifetime"  "-1.0"     
+
+        "sound enable"  "1"
+        "sound file"    "ghost_eating.wav"  
+        "sound volume"  "1.0"   
+        "sound pitch"   "100"   
+
+        "command on take"   "sm_givecredits {client} 20"
+    }
+}

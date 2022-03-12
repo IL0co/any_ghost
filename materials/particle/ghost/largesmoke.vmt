@@ -1,0 +1,9 @@
+SpriteCard
+{
+	$basetexture "particle/ghost/largesmoke"
+	$surfaceprop Default
+
+	"$vertexcolor" 1 
+	"$vertexalpha" 1 
+	"$color" 		1
+}
